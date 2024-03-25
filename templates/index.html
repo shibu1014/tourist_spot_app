@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tourist_spot</title>
+    <link rel="stylesheet" href="..\static\stylesheet.css">
+</head>
+<body>
+    <h1>観光地画像分類アプリ</h1>
+    <p>富士山、金閣寺、厳島神社、東京タワー、青い池の画像をアップロードしてください。</p>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" id="image">
+        <input type="submit" value="画像を分類">
+    </form>
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
